@@ -9,12 +9,12 @@ import Loader from '../components/Loader/Loader';
 import ClearButton from '../components/ClearButton/ClearButton';
 import CardList from '../components/CardList/CardList';
 
-function Search() {
+const Search = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
-  async function searchRepos(keyword) {
+  const searchRepos = async (keyword) => {
     setRepos([]);
     setLoading(true);
     setShowAlert(false);
@@ -22,11 +22,11 @@ function Search() {
     setRepos(result);
     setLoading(false);
     setShowAlert(!result.length);
-  }
+  };
 
-  function clearRepos() {
+  const clearRepos = () => {
     setRepos([]);
-  }
+  };
 
   return (
     <Container>
@@ -34,13 +34,13 @@ function Search() {
       <InputSubmit
         placeholder="Enter Repository Name"
         buttonText="Search!"
-        onSubmit={(value) => searchRepos(value)}
+        onSubmit={searchRepos}
       />
       {loading && <Loader />}
       <ClearButton clear={clearRepos} items={repos} />
       <CardList items={repos} />
     </Container>
   );
-}
+};
 
 export default Search;

@@ -2,21 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Button} from './styledComponents';
 
-function ClearButton(props) {
-  const {items, clear} = props;
+const ClearButton = ({items, clear}) => {
+  if (!items.length) {
+    return null;
+  }
   return (
-    (items.length > 0)
-      ? (
-        <Button
-          type="button"
-          className="btn btn-danger"
-          onClick={clear}
-        >
-          Clear All
-        </Button>
-      ) : null
+    <Button
+      type="button"
+      className="btn btn-danger"
+      onClick={clear}
+    >
+      Clear All
+    </Button>
   );
-}
+};
 
 ClearButton.propTypes = {
   items: PropTypes.array.isRequired,

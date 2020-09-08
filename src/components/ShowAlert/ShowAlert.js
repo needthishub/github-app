@@ -2,18 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Alert} from './styledComponents';
 
-function ShowAlert(props) {
-  const {showAlert} = props;
+const ShowAlert = ({showAlert}) => {
+  if (!showAlert) {
+    return null;
+  }
   return (
-    (showAlert)
-      ? (
-        <Alert className="alert alert-danger" role="alert">
-          <i className="fas fa-exclamation-circle" />
+    <Alert className="alert alert-danger" role="alert">
+      <i className="fas fa-exclamation-circle" />
                 &nbsp;Please enter the name of your repository.
-        </Alert>
-      ) : null
+    </Alert>
   );
-}
+};
 
 ShowAlert.propTypes = {
   showAlert: PropTypes.bool.isRequired,

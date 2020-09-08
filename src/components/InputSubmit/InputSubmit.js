@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import {Input, Button} from './styledComponents';
 
-function InputSubmit({onSubmit, placeholder, buttonText}) {
+const InputSubmit = ({onSubmit, placeholder, buttonText}) => {
   const [value, setValue] = useState('');
 
-  function submitValue() {
+  const submitValue = () => {
     setValue('');
     onSubmit(value);
-  }
+  };
 
   return (
     <>
@@ -22,6 +23,12 @@ function InputSubmit({onSubmit, placeholder, buttonText}) {
       </Button>
     </>
   );
-}
+};
+
+InputSubmit.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+};
 
 export default InputSubmit;
