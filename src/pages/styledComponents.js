@@ -5,13 +5,3 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
-export const Alert = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-export const Button = styled.button`
-  width: 300px;
-  margin: 10px;
-`;

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Container} from './styledComponents';
-import Card from '../card/Card';
+import Card from '../Card/Card';
 
 class CardList extends Component {
   render() {
