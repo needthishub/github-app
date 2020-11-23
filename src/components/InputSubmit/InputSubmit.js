@@ -10,6 +10,12 @@ const InputSubmit = ({onSubmit, placeholder, buttonText}) => {
     onSubmit(value);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13) {
+      submitValue();
+    }
+  };
+
   return (
     <>
       <Input
@@ -17,6 +23,7 @@ const InputSubmit = ({onSubmit, placeholder, buttonText}) => {
         placeholder={placeholder}
         value={value}
         onChange={(event) => setValue(event.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <Button className="btn btn-primary" onClick={submitValue}>
         {buttonText}
