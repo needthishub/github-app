@@ -8,12 +8,14 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 
 import Parallax from './components/Parallax/Parallax';
+import ToTopArrow from './components/ToTopArrow/ToTopArrow';
 
 const App = () =>
   (
     <BrowserRouter>
       <Navigation />
       <Parallax />
+      <ToTopArrow />
       <Switch>
         <Route path="/" exact component={Search} />
         <Route path="/about" exact component={About} />
