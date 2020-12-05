@@ -6,6 +6,7 @@ export const Container = styled.div`
   margin: 15px;
   border: solid 2px #3a3a3a;
   border-radius: 5px;
+  background-color: blueviolet;
 `;
 
 export const Image = styled.img`

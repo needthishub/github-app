@@ -41,4 +41,18 @@ describe('<InputSubmit/>', () => {
     wrapper.find(Input).simulate('change', event);
     expect(setValueMock).toHaveBeenCalledWith('the-value');
   });
+
+  it('should submit when press Enter', () => {
+    const event = {
+      preventDefault() {},
+      keyCode: 13,
+    };
+    const wrapper = shallow(<InputSubmit
+      onSubmit={jest.fn()}
+      placeholder="Enter Repository Name"
+      buttonText="Search!"
+    />);
+    wrapper.find(Input).props().onKeyDown(event);
+    expect(setValueMock).toHaveBeenCalled();
+  });
 });

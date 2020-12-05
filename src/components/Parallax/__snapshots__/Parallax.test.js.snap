@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Parallax /> should show parallax effect 1`] = `ShallowWrapper {}`;

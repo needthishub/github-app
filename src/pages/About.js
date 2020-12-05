@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Container>
       <h1>About This App</h1>
-      <p>App to Search Github USers</p>
+      <p>App to Search Github Repos</p>
       <p>Version: 1.0.0</p>
       <button type="button" className="btn btn-outline-success" onClick={() => history.push('/')}>
         Back to Search
