@@ -1,19 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from 'react-bootstrap/Button';
 import {
-  Container, Image, CardBody, Title, Description,
+  Container, ImageContainer, Image, CardBody, Title, Description,
 } from './styledComponents';
 
 const Card = ({
   link, image, title, description,
 }) => (
   <Container>
-    <a href={link}>
+    <ImageContainer>
       <Image src={image} />
-    </a>
+    </ImageContainer>
     <CardBody>
       <Title>{title}</Title>
-      <Description>{description}</Description>
+      { description
+        ? (
+          <Description>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            <strong>Description:</strong>
+&nbsp;
+            {description}
+          </Description>
+        ) : <></>}
+      <Button href={link} role="button" rel="noreferrer" target="_blank" varian="info">
+        <strong>View the Repo</strong>
+      </Button>
     </CardBody>
   </Container>
 );

@@ -1,21 +1,28 @@
 * {
   box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
   border: 0;
+  background-image: url('images/38582.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
 }
 
 .scrollTop {
     position: fixed;
-    width: 100%;
-    left: 600px;
-    bottom:90px;
+    right: 6.25rem;
+    bottom: 6.25rem;
     align-items: center;
-    height: 20px;
-    justify-content: right;
+    border-radius: 50px;
+    width: 6.25rem;
+    height: 6.25rem;
     z-index: 1000;
     cursor: pointer;
     animation: fadeIn 0.3s;
@@ -34,6 +41,10 @@ body {
     100% {
         opacity: 0.5;
     }
+}
+
+@keyframes BlinkingExcMark {
+    50% {color: red;}
 }
 
 /*

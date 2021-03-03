@@ -22,7 +22,7 @@ const ToTopArrow = () => {
     <FaArrowCircleUp
       className="scrollTop"
       onClick={scrollTop}
-      style={{height: 40, display: showScroll ? 'flex' : 'none'}}
+      style={{display: showScroll ? 'flex' : 'none'}}
     />
   );
 };

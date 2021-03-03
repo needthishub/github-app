@@ -1,5 +1,6 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import {Container} from './styledComponents';
 
 const NotFound = () => {
@@ -7,10 +8,10 @@ const NotFound = () => {
   return (
     <Container>
       <h1>404 Not Found</h1>
-      <p className="lead">The page you are looking for doesn't exist...</p>
-      <button type="button" className="btn btn-outline-success" onClick={() => history.push('/')}>
+      <p className="lead">The page you are looking for doesn&apos;t exist...</p>
+      <Button type="button" variant="success" onClick={() => history.push('/')}>
         Back to Search
-      </button>
+      </Button>
     </Container>
   );
 };

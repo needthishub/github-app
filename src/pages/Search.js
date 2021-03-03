@@ -37,7 +37,7 @@ const Search = () => {
         onSubmit={searchRepos}
       />
       {loading && <Loader />}
-      <ClearButton clear={clearRepos} items={repos} />
+      <ClearButton buttonText="Clear All" clear={clearRepos} items={repos} />
       <CardList items={repos} />
     </Container>
   );

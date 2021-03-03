@@ -1,5 +1,6 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import {Container} from './styledComponents';
 
 const About = () => {
@@ -7,11 +8,11 @@ const About = () => {
   return (
     <Container>
       <h1>About This App</h1>
-      <p>App to Search Github Repos</p>
+      <p>App to Search Github Repositories</p>
       <p>Version: 1.0.0</p>
-      <button type="button" className="btn btn-outline-success" onClick={() => history.push('/')}>
+      <Button type="button" variant="success" onClick={() => history.push('/')}>
         Back to Search
-      </button>
+      </Button>
     </Container>
   );
 };

@@ -5,7 +5,7 @@ import {Button} from './styledComponents';
 
 describe('<ClearButton/>', () => {
   it('should hide button when no users', () => {
-    const wrapper = shallow(<ClearButton items={[]} clear={jest.fn()} />);
+    const wrapper = shallow(<ClearButton items={[]} clear={jest.fn()} buttonText="Clear" />);
     expect(wrapper.find('items').exists()).toBe(false);
   });
 
@@ -19,6 +19,7 @@ describe('<ClearButton/>', () => {
         description: 'testText',
       }]}
       clear={jest.fn()}
+      buttonText="Clear"
     />);
     expect(wrapper.find(Button).exists()).toBe(true);
   });

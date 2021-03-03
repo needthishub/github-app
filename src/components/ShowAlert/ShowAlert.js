@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Alert} from './styledComponents';
+import {Alert, ExclamationMark} from './styledComponents';
 
 const ShowAlert = ({showAlert}) => {
   if (!showAlert) {
@@ -8,7 +8,7 @@ const ShowAlert = ({showAlert}) => {
   }
   return (
     <Alert className="alert alert-danger" role="alert">
-      <i className="fas fa-exclamation-circle" />
+      <ExclamationMark className="fas fa-exclamation-circle" />
                 &nbsp;Please enter the name of your repository.
     </Alert>
   );

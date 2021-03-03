@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Input = styled.input`
-  width: 300px;
-  padding: 10px 20px;
+  width: 31.25rem;
+  padding: 0.625rem 1.25rem;
+  margin-bottom: 1.25rem;
   border: solid 2px #686868;
   border-radius: 5px;
-  margin-right: 5px;
   outline: none;
   &:focus {
     border-color: #005ad8;
@@ -14,9 +14,8 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 300px;
-  margin: 10px;
-  margin-bottom: 0px;
+  width: 18.75rem;
+  margin: 0;
   background-color: #005ad8;
   color: white;
   outline: none;
